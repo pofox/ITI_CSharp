@@ -72,7 +72,7 @@ namespace ITI_C_
                 while(!int.TryParse(Console.ReadLine(),out year)||year<thisYear-Age+17||year>thisYear)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Invalide Year");
+                    Console.WriteLine($"Invalide Year [Enter a number from {thisYear-Age+17} to {thisYear}");
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 Console.Write("month : ");
@@ -80,7 +80,7 @@ namespace ITI_C_
                 while (!int.TryParse(Console.ReadLine(), out month) || month < 1 || month > 12)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Invalide month");
+                    Console.WriteLine("Invalide month [Enter a number from 1 to 12]");
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 Console.Write("day : ");
@@ -88,7 +88,7 @@ namespace ITI_C_
                 while (!int.TryParse(Console.ReadLine(), out day) || day < 1 || day > 31)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Invalide day");
+                    Console.WriteLine("Invalide day [Enter a number from 1 to 31]");
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 Date hireDate = new Date(year,month,day);
