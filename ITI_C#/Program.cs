@@ -53,6 +53,10 @@ namespace ITI_C_
             Console.WriteLine(p1);
             Console.WriteLine((string)p2);
             Console.WriteLine(p1 == p2 ? "P1 == P2" : "P1 != P2");
+            Console.WriteLine("p1 + p2 = " + Math.Add(p1,p2));
+            Console.WriteLine("p1 - p2 = " + Math.Sub(p1,p2));
+            Console.WriteLine("p1 * p2 = " + Math.Mul(p1,p2));
+            Console.WriteLine("p1 / p2 = " + Math.Div(p1, p2));
             Point3D[] points = new Point3D[3];
             Console.WriteLine("Unsorted random points");
             for (int i = 0; i < 3; i++)
