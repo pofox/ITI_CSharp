@@ -4,7 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            float x, y, z;
+            Point3D p1, p2;
+            Console.Write("P1.x = ");
+            while (!float.TryParse(Console.ReadLine(),out x))
+            {
+                Console.ResetColor();
+                Console.WriteLine("Error Try Again");
+                Console.ResetColor();
+                Console.Write("P1.x = ");
+            }
         }
     }
 }
