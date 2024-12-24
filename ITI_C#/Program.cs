@@ -1,4 +1,6 @@
-﻿namespace ITI_C_
+﻿using System.Security.Cryptography;
+
+namespace ITI_C_
 {
     internal class Program
     {
@@ -51,6 +53,19 @@
             Console.WriteLine(p1);
             Console.WriteLine((string)p2);
             Console.WriteLine(p1 == p2 ? "P1 == P2" : "P1 != P2");
+            Point3D[] points = new Point3D[3];
+            Console.WriteLine("Unsorted random points");
+            for (int i = 0; i < 3; i++)
+            {
+                points[i]=new Point3D(RandomNumberGenerator.GetInt32(10), RandomNumberGenerator.GetInt32(10),RandomNumberGenerator.GetInt32(10));
+                Console.WriteLine(points[i]);
+            }
+            Array.Sort(points);
+            Console.WriteLine("Sorted points");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine(points[i]);
+            }
         }
     }
 }
