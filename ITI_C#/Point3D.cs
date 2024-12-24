@@ -49,13 +49,11 @@ namespace ITI_C_
         }
         public override bool Equals(object? obj)
         {
-            if (obj == null)
-                return false;
-            if (!(obj is Point3D))
-                return false;
+            if (obj == null || !(obj is Point3D))
+                throw new ArgumentException();
             Point3D p = (Point3D)obj;
             if (GetType() != p.GetType())
-                return false;
+                throw new ArgumentException();
             return x == p.x && y == p.y && z == p.z;
         }
         public override string ToString()
