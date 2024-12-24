@@ -23,7 +23,7 @@ namespace ITI_C_
         public static implicit operator bool(Duration d) { return (int)d>0; }
         public static Duration operator +(Duration t1, Duration t2)
         {
-            return new Duration(t1.Hours+t2.Hours,t1.Minutes+t2.Minutes,t1.Seconds+t2.Seconds);
+            return new Duration((int)t1 + (int)t2);
         }
         public static Duration operator -(Duration t1)
         {
@@ -39,7 +39,7 @@ namespace ITI_C_
         }
         public static Duration operator ++(Duration t)
         {
-            return new Duration(t.Hours, t.Minutes + 1, t.Seconds);
+            return new Duration((int)t + 60);
         }
         public static Duration operator --(Duration t)
         {
