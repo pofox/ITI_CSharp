@@ -6,7 +6,7 @@
         {
             SortedList<int,string> list = new SortedList<int,string>();
             list.Add(4, "four");
-            list.Add(1, "one");
+            list.Add(-1, "one");
             list.Add(2, "two");
             list.Add(5, "five");
             list.Add(3, "three");
